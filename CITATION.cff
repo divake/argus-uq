@@ -31,8 +31,9 @@ authors: &authors
     given-names: Amit Ranjan
     affiliation: University of Illinois Chicago
 preferred-citation:
-  type: conference-paper
-  title: "Argus: A Cross-Regime Study of Uncertainty Quantification Transferability in Single-Step GUI Grounding"
+  type: article
+  title: "Uncertainty Quantification for Computer-Use Agents: A Benchmark across Vision-Language Models and GUI Grounding Datasets"
   authors: *authors
-  collection-title: "NeurIPS 2026 Evaluations and Datasets Track"
+  journal: "arXiv preprint arXiv:2606.25760"
+  url: "https://arxiv.org/abs/2606.25760"
   year: 2026

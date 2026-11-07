@@ -137,13 +137,14 @@ If you use `argus-uq`, please cite the paper (`CITATION.cff` has the same
 information):
 
 ```bibtex
-@inproceedings{kumar2026argus,
-  title     = {Argus: A Cross-Regime Study of Uncertainty Quantification
-               Transferability in Single-Step GUI Grounding},
-  author    = {Kumar, Divake and Tayebati, Sina and Naik, Devashri and
-               Rios, Amanda Sofie and Ahuja, Nilesh and Tickoo, Omesh and
-               Krishnan, Ranganath and Trivedi, Amit Ranjan},
-  booktitle = {NeurIPS 2026 Evaluations and Datasets Track},
-  year      = {2026}
+@article{kumar2026uncertainty,
+  title   = {Uncertainty Quantification for Computer-Use Agents: A Benchmark
+             across Vision-Language Models and GUI Grounding Datasets},
+  author  = {Kumar, Divake and Tayebati, Sina and Naik, Devashri and
+             Rios, Amanda Sofie and Ahuja, Nilesh and Tickoo, Omesh and
+             Krishnan, Ranganath and Trivedi, Amit Ranjan},
+  journal = {arXiv preprint arXiv:2606.25760},
+  year    = {2026}
+}
 }
 ```
