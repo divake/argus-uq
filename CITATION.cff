@@ -2,7 +2,7 @@ cff-version: 1.2.0
 message: "If you use this software or data, please cite the paper below."
 title: "argus-uq"
 type: software
-version: 0.1.0
+version: 0.1.1
 license: MIT
 repository-code: "https://github.com/divake/argus-uq"
 authors: &authors

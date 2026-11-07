@@ -118,7 +118,7 @@
   "conformsTo": "http://mlcommons.org/croissant/1.0",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "url": "https://github.com/divake/argus-uq",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "datePublished": "2026-05-06",
   "citeAs": "@article{kumar2026uncertainty, title={Uncertainty Quantification for Computer-Use Agents: A Benchmark across Vision-Language Models and GUI Grounding Datasets}, author={Kumar, Divake and Tayebati, Sina and Naik, Devashri and Rios, Amanda Sofie and Ahuja, Nilesh and Tickoo, Omesh and Krishnan, Ranganath and Trivedi, Amit Ranjan}, journal={arXiv preprint arXiv:2606.25760}, year={2026}}",
   "keywords": [
