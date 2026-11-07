@@ -1,9 +1,8 @@
 """Compare an OS-identical method across open-weight and closed-API cells.
 
 The 8 closed-source
-methods use formulas bit-for-bit identical to their open-source
-counterparts. Cross-tier comparisons of these 8 methods are
-apples-to-apples.
+methods use the same score formulas as their open-source counterparts.
+IMGHEDGE uses a different perturbation set on the closed-source panel.
 
 This example scores ``self_consistency`` on every cell where it is
 runnable.

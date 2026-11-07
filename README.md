@@ -3,7 +3,7 @@
 A Python library for uncertainty quantification on vision-language-model
 GUI grounding agents.
 
-`argus-uq` is the first reproducible benchmark library that unifies
+`argus-uq` is a reproducible library that unifies
 **twenty-seven UQ methods across seven families** (logit, sampling,
 consistency, density, attention-trace, verbalised, VLM-native) on the
 four canonical single-step grounding datasets (ScreenSpot-v2,
