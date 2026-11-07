@@ -1,0 +1,13 @@
+cell_id,vendor,dataset,auroc_top1_method,auroc_top1_family,auroc_top1_mean,ause_top1_method,ause_top1_family,ause_top1_mean,agree
+anthropic_osg,anthropic,OSWorld-G,ccp,hybrid,0.6160367762128325,ccp,hybrid,0.5412948484672749,True
+anthropic_sp,anthropic,ScreenSpot-Pro,ccp,hybrid,0.7311190250079139,ccp,hybrid,0.27250981315425593,True
+anthropic_uiv,anthropic,UI-Vision-EG,ccp,hybrid,0.6514536767087787,ccp,hybrid,0.3927690638283077,True
+anthropic_v2,anthropic,ScreenSpot-v2,verbalized_2s,verbalised,0.6475272727272727,verbalized_2s,verbalised,0.39333125761636145,True
+gemini_osg,gemini,OSWorld-G,verbalized_1s,verbalised,0.8797956891317547,verbalized_1s,verbalised,0.31201317376375803,True
+gemini_sp,gemini,ScreenSpot-Pro,verbalized_2s,verbalised,0.8563269027737787,verbalized_2s,verbalised,0.26330898218945825,True
+gemini_uiv,gemini,UI-Vision-EG,ccp,hybrid,0.7912628865979382,ccp,hybrid,0.38706408864293623,True
+gemini_v2_300,gemini,ScreenSpot-v2,verbalized_1s,verbalised,0.9662894248608535,verbalized_2s,verbalised,0.18429915760503326,False
+openai_osg,openai,OSWorld-G,verbalized_2s,verbalised,0.7702987818383167,verbalized_2s,verbalised,0.6148893564188218,True
+openai_sp_300,openai,ScreenSpot-Pro,ccp,hybrid,0.7349424342105263,ccp,hybrid,0.26681712953825637,True
+openai_uiv,openai,UI-Vision-EG,verbalized_1s,verbalised,0.7225125112601342,lexical_similarity,sampling,0.4627543299999304,False
+openai_v2_300,openai,ScreenSpot-v2,ccp,hybrid,0.797570612748881,lexical_similarity,sampling,0.3478509370405503,False

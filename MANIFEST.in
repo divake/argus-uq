@@ -1,0 +1,5 @@
+include CITATION.cff DATA_CARD.md setup.py
+recursive-include data_release/per_item_full *.parquet
+recursive-include data_release/derived *.csv
+recursive-include data_release/subsets *.json
+include data_release/manifest.json data_release/panel_drops.json data_release/README.md

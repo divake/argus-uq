@@ -1,0 +1,31 @@
+cell_id,method,metric,n_total,n_nan,pct_nan,flag_5plus,reason
+Q72xSP,focus,brier_iso,50,1,2.0,False,"isotonic recalibration instability on this (cell, method)"
+Q72xSP,focus,ece_iso,50,1,2.0,False,"isotonic recalibration instability on this (cell, method)"
+Q72xSP,rauq_proxy_full,brier_iso,50,1,2.0,False,"isotonic recalibration instability on this (cell, method)"
+Q72xSP,rauq_proxy_full,ece_iso,50,1,2.0,False,"isotonic recalibration instability on this (cell, method)"
+Q72xSP,uqac,brier_iso,50,1,2.0,False,"isotonic recalibration instability on this (cell, method)"
+Q72xSP,uqac,ece_iso,50,1,2.0,False,"isotonic recalibration instability on this (cell, method)"
+Q7xSP,focus,brier_iso,50,1,2.0,False,"isotonic recalibration instability on this (cell, method)"
+Q7xSP,focus,ece_iso,50,1,2.0,False,"isotonic recalibration instability on this (cell, method)"
+Q7xSP,rauq_proxy_full,brier_iso,50,1,2.0,False,"isotonic recalibration instability on this (cell, method)"
+Q7xSP,rauq_proxy_full,ece_iso,50,1,2.0,False,"isotonic recalibration instability on this (cell, method)"
+Q7xSP,uqac,brier_iso,50,1,2.0,False,"isotonic recalibration instability on this (cell, method)"
+Q7xSP,uqac,ece_iso,50,1,2.0,False,"isotonic recalibration instability on this (cell, method)"
+Q7xV2,focus,brier_iso,50,1,2.0,False,"isotonic recalibration instability on this (cell, method)"
+Q7xV2,focus,ece_iso,50,1,2.0,False,"isotonic recalibration instability on this (cell, method)"
+Q7xV2,rauq_proxy_full,brier_iso,50,1,2.0,False,"isotonic recalibration instability on this (cell, method)"
+Q7xV2,rauq_proxy_full,ece_iso,50,1,2.0,False,"isotonic recalibration instability on this (cell, method)"
+Q7xV2,uqac,brier_iso,50,1,2.0,False,"isotonic recalibration instability on this (cell, method)"
+Q7xV2,uqac,ece_iso,50,1,2.0,False,"isotonic recalibration instability on this (cell, method)"
+UIxSP,focus,brier_iso,50,1,2.0,False,"isotonic recalibration instability on this (cell, method)"
+UIxSP,focus,ece_iso,50,1,2.0,False,"isotonic recalibration instability on this (cell, method)"
+UIxSP,rauq_proxy_full,brier_iso,50,1,2.0,False,"isotonic recalibration instability on this (cell, method)"
+UIxSP,rauq_proxy_full,ece_iso,50,1,2.0,False,"isotonic recalibration instability on this (cell, method)"
+UIxSP,uqac,brier_iso,50,1,2.0,False,"isotonic recalibration instability on this (cell, method)"
+UIxSP,uqac,ece_iso,50,1,2.0,False,"isotonic recalibration instability on this (cell, method)"
+UIxV2,focus,brier_iso,50,1,2.0,False,v6 attention sidecar missing 303/1272 items on UIxV2
+UIxV2,focus,ece_iso,50,1,2.0,False,v6 attention sidecar missing 303/1272 items on UIxV2
+UIxV2,rauq_proxy_full,brier_iso,50,1,2.0,False,v6 attention sidecar missing 303/1272 items on UIxV2
+UIxV2,rauq_proxy_full,ece_iso,50,1,2.0,False,v6 attention sidecar missing 303/1272 items on UIxV2
+UIxV2,uqac,brier_iso,50,1,2.0,False,v6 attention sidecar missing 303/1272 items on UIxV2
+UIxV2,uqac,ece_iso,50,1,2.0,False,v6 attention sidecar missing 303/1272 items on UIxV2

@@ -1,0 +1,32 @@
+{
+  "logprob_dependent": [
+    "p_true",
+    "cocoa",
+    "cocoa_1mca"
+  ],
+  "openai_only_extras": [
+    "safeground_ta",
+    "safeground_ie",
+    "safeground_cd",
+    "safeground_com",
+    "eccentricity",
+    "click_bbox_entropy_13way",
+    "imghedge_text_combined",
+    "hedge_ensemble"
+  ],
+  "renames_applied": {
+    "coord_agreement": "ccp",
+    "hedge_text": "hedge",
+    "hedge_image": "imghedge"
+  },
+  "kept_methods": [
+    "self_consistency",
+    "semantic_entropy",
+    "lexical_similarity",
+    "ccp",
+    "verbalized_1s",
+    "verbalized_2s",
+    "hedge",
+    "imghedge"
+  ]
+}

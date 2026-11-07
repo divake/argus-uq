@@ -1,0 +1,797 @@
+{
+  "@context": {
+    "@language": "en",
+    "@vocab": "https://schema.org/",
+    "citeAs": "cr:citeAs",
+    "column": "cr:column",
+    "conformsTo": "dct:conformsTo",
+    "cr": "http://mlcommons.org/croissant/",
+    "data": {
+      "@id": "cr:data",
+      "@type": "@json"
+    },
+    "dataType": {
+      "@id": "cr:dataType",
+      "@type": "@vocab"
+    },
+    "dct": "http://purl.org/dc/terms/",
+    "equivalentProperty": "cr:equivalentProperty",
+    "examples": {
+      "@id": "cr:examples",
+      "@type": "@json"
+    },
+    "extract": "cr:extract",
+    "field": "cr:field",
+    "fileObject": "cr:fileObject",
+    "fileProperty": "cr:fileProperty",
+    "fileSet": "cr:fileSet",
+    "format": "cr:format",
+    "includes": "cr:includes",
+    "isLiveDataset": "cr:isLiveDataset",
+    "jsonPath": "cr:jsonPath",
+    "key": "cr:key",
+    "md5": "cr:md5",
+    "parentField": "cr:parentField",
+    "path": "cr:path",
+    "rai": "http://mlcommons.org/croissant/RAI/",
+    "recordSet": "cr:recordSet",
+    "references": "cr:references",
+    "regex": "cr:regex",
+    "repeated": "cr:repeated",
+    "replace": "cr:replace",
+    "samplingRate": "cr:samplingRate",
+    "sc": "https://schema.org/",
+    "separator": "cr:separator",
+    "source": "cr:source",
+    "subField": "cr:subField",
+    "transform": "cr:transform"
+  },
+  "@type": "sc:Dataset",
+  "name": "argus-uq",
+  "description": "Argus-UQ benchmark - per-item uncertainty quantification scores for vision-language-model GUI grounding agents across 28 cells (16 open-weight + 12 closed-API). Each cell contains 27 (open-source) or 8 (closed-source) UQ method scores per item, plus correctness labels and distance to the gold target.",
+  "creator": [
+    {
+      "@type": "sc:Person",
+      "name": "Divake Kumar",
+      "affiliation": {
+        "@type": "sc:Organization",
+        "name": "University of Illinois Chicago"
+      }
+    },
+    {
+      "@type": "sc:Person",
+      "name": "Sina Tayebati",
+      "affiliation": {
+        "@type": "sc:Organization",
+        "name": "University of Illinois Chicago"
+      }
+    },
+    {
+      "@type": "sc:Person",
+      "name": "Devashri Naik",
+      "affiliation": {
+        "@type": "sc:Organization",
+        "name": "University of Illinois Chicago"
+      }
+    },
+    {
+      "@type": "sc:Person",
+      "name": "Amanda Sofie Rios",
+      "affiliation": {
+        "@type": "sc:Organization",
+        "name": "Intel Labs"
+      }
+    },
+    {
+      "@type": "sc:Person",
+      "name": "Nilesh Ahuja",
+      "affiliation": {
+        "@type": "sc:Organization",
+        "name": "Intel Labs"
+      }
+    },
+    {
+      "@type": "sc:Person",
+      "name": "Omesh Tickoo",
+      "affiliation": {
+        "@type": "sc:Organization",
+        "name": "Intel Labs"
+      }
+    },
+    {
+      "@type": "sc:Person",
+      "name": "Ranganath Krishnan",
+      "affiliation": {
+        "@type": "sc:Organization",
+        "name": "Capital One AI Labs"
+      }
+    },
+    {
+      "@type": "sc:Person",
+      "name": "Amit Ranjan Trivedi",
+      "affiliation": {
+        "@type": "sc:Organization",
+        "name": "University of Illinois Chicago"
+      }
+    }
+  ],
+  "conformsTo": "http://mlcommons.org/croissant/1.0",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "url": "https://github.com/divake/argus-uq",
+  "version": "0.1.0",
+  "datePublished": "2026-05-06",
+  "citeAs": "@inproceedings{kumar2026argus, title={Argus: A Cross-Regime Study of Uncertainty Quantification Transferability in Single-Step GUI Grounding}, author={Kumar, Divake and Tayebati, Sina and Naik, Devashri and Rios, Amanda Sofie and Ahuja, Nilesh and Tickoo, Omesh and Krishnan, Ranganath and Trivedi, Amit Ranjan}, booktitle={NeurIPS 2026 Evaluations and Datasets Track}, year={2026}}",
+  "keywords": [
+    "uncertainty quantification",
+    "vision-language models",
+    "GUI grounding",
+    "computer-use agents",
+    "conformal prediction",
+    "benchmark"
+  ],
+  "distribution": [
+    {
+      "@type": "cr:FileObject",
+      "@id": "repository",
+      "name": "repository",
+      "description": "Git repository holding the release; all files are under data_release/.",
+      "contentUrl": "https://github.com/divake/argus-uq",
+      "encodingFormat": "git+https",
+      "sha256": "https://github.com/mlcommons/croissant/issues/80"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "per_item_full",
+      "name": "per_item_full",
+      "description": "16 open-weight + 12 closed-API per-item parquets",
+      "containedIn": {
+        "@id": "repository"
+      },
+      "encodingFormat": "application/vnd.apache.parquet",
+      "includes": "data_release/per_item_full/*.parquet"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "derived",
+      "name": "derived",
+      "description": "Canonical paper-numbers CSVs (29 files) computed via 50 random calibration/test splits",
+      "containedIn": {
+        "@id": "repository"
+      },
+      "encodingFormat": "text/csv",
+      "includes": "data_release/derived/*.csv"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "subsets",
+      "name": "subsets",
+      "description": "Locked stratified subset definitions (4 JSONs)",
+      "containedIn": {
+        "@id": "repository"
+      },
+      "encodingFormat": "application/json",
+      "includes": "data_release/subsets/*.json"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "closed_source_records",
+      "name": "closed_source_records",
+      "description": "Per-call API request + response records for closed-API cells (12 JSONLs; no API keys)",
+      "containedIn": {
+        "@id": "repository"
+      },
+      "encodingFormat": "application/x-ndjson",
+      "includes": "data_release/closed_source_records/*.records.jsonl"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "per_item_open",
+      "name": "per_item_open",
+      "description": "The 16 open-weight per-item parquets",
+      "containedIn": {
+        "@id": "repository"
+      },
+      "encodingFormat": "application/vnd.apache.parquet",
+      "includes": [
+        "data_release/per_item_full/Q7x*.parquet",
+        "data_release/per_item_full/Q72x*.parquet",
+        "data_release/per_item_full/UIx*.parquet",
+        "data_release/per_item_full/PTx*.parquet",
+        "data_release/per_item_full/PxUIV*.parquet"
+      ]
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "per_item_closed",
+      "name": "per_item_closed",
+      "description": "The 12 closed-API per-item parquets",
+      "containedIn": {
+        "@id": "repository"
+      },
+      "encodingFormat": "application/vnd.apache.parquet",
+      "includes": [
+        "data_release/per_item_full/OAIx*.parquet",
+        "data_release/per_item_full/Sonx*.parquet",
+        "data_release/per_item_full/Gemx*.parquet"
+      ]
+    }
+  ],
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "@id": "cell_record",
+      "name": "cell_record",
+      "description": "One per-item record in any of the 28 cells: identifier, correctness, and the 8 UQ scores shared by all cells.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "cell_record/item_id",
+          "name": "item_id",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "per_item_full"
+            },
+            "extract": {
+              "column": "item_id"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "cell_record/correct",
+          "name": "correct",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileSet": {
+              "@id": "per_item_full"
+            },
+            "extract": {
+              "column": "correct"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "cell_record/self_consistency",
+          "name": "self_consistency",
+          "dataType": "sc:Float",
+          "source": {
+            "fileSet": {
+              "@id": "per_item_full"
+            },
+            "extract": {
+              "column": "self_consistency"
+            }
+          },
+          "description": "UQ score; higher = more uncertain."
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "cell_record/semantic_entropy",
+          "name": "semantic_entropy",
+          "dataType": "sc:Float",
+          "source": {
+            "fileSet": {
+              "@id": "per_item_full"
+            },
+            "extract": {
+              "column": "semantic_entropy"
+            }
+          },
+          "description": "UQ score; higher = more uncertain."
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "cell_record/lexical_similarity",
+          "name": "lexical_similarity",
+          "dataType": "sc:Float",
+          "source": {
+            "fileSet": {
+              "@id": "per_item_full"
+            },
+            "extract": {
+              "column": "lexical_similarity"
+            }
+          },
+          "description": "UQ score; higher = more uncertain."
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "cell_record/ccp",
+          "name": "ccp",
+          "dataType": "sc:Float",
+          "source": {
+            "fileSet": {
+              "@id": "per_item_full"
+            },
+            "extract": {
+              "column": "ccp"
+            }
+          },
+          "description": "UQ score; higher = more uncertain."
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "cell_record/verbalized_1s",
+          "name": "verbalized_1s",
+          "dataType": "sc:Float",
+          "source": {
+            "fileSet": {
+              "@id": "per_item_full"
+            },
+            "extract": {
+              "column": "verbalized_1s"
+            }
+          },
+          "description": "UQ score; higher = more uncertain."
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "cell_record/verbalized_2s",
+          "name": "verbalized_2s",
+          "dataType": "sc:Float",
+          "source": {
+            "fileSet": {
+              "@id": "per_item_full"
+            },
+            "extract": {
+              "column": "verbalized_2s"
+            }
+          },
+          "description": "UQ score; higher = more uncertain."
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "cell_record/hedge",
+          "name": "hedge",
+          "dataType": "sc:Float",
+          "source": {
+            "fileSet": {
+              "@id": "per_item_full"
+            },
+            "extract": {
+              "column": "hedge"
+            }
+          },
+          "description": "UQ score; higher = more uncertain."
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "cell_record/imghedge",
+          "name": "imghedge",
+          "dataType": "sc:Float",
+          "source": {
+            "fileSet": {
+              "@id": "per_item_full"
+            },
+            "extract": {
+              "column": "imghedge"
+            }
+          },
+          "description": "UQ score; higher = more uncertain."
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "open_cell_record",
+      "name": "open_cell_record",
+      "description": "Distance and the 19 further UQ scores available only in the 16 open-weight cells.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "open_cell_record/item_id",
+          "name": "item_id",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "per_item_open"
+            },
+            "extract": {
+              "column": "item_id"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "open_cell_record/dist",
+          "name": "dist",
+          "dataType": "sc:Float",
+          "source": {
+            "fileSet": {
+              "@id": "per_item_open"
+            },
+            "extract": {
+              "column": "dist"
+            }
+          },
+          "description": "Normalised distance from predicted click to gold bbox (relative to image diagonal)."
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "open_cell_record/msp",
+          "name": "msp",
+          "dataType": "sc:Float",
+          "source": {
+            "fileSet": {
+              "@id": "per_item_open"
+            },
+            "extract": {
+              "column": "msp"
+            }
+          },
+          "description": "UQ score; higher = more uncertain."
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "open_cell_record/perplexity",
+          "name": "perplexity",
+          "dataType": "sc:Float",
+          "source": {
+            "fileSet": {
+              "@id": "per_item_open"
+            },
+            "extract": {
+              "column": "perplexity"
+            }
+          },
+          "description": "UQ score; higher = more uncertain."
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "open_cell_record/perplexity_exp",
+          "name": "perplexity_exp",
+          "dataType": "sc:Float",
+          "source": {
+            "fileSet": {
+              "@id": "per_item_open"
+            },
+            "extract": {
+              "column": "perplexity_exp"
+            }
+          },
+          "description": "UQ score; higher = more uncertain."
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "open_cell_record/sequence_probability",
+          "name": "sequence_probability",
+          "dataType": "sc:Float",
+          "source": {
+            "fileSet": {
+              "@id": "per_item_open"
+            },
+            "extract": {
+              "column": "sequence_probability"
+            }
+          },
+          "description": "UQ score; higher = more uncertain."
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "open_cell_record/mean_token_entropy",
+          "name": "mean_token_entropy",
+          "dataType": "sc:Float",
+          "source": {
+            "fileSet": {
+              "@id": "per_item_open"
+            },
+            "extract": {
+              "column": "mean_token_entropy"
+            }
+          },
+          "description": "UQ score; higher = more uncertain."
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "open_cell_record/semantic_entropy_weighted",
+          "name": "semantic_entropy_weighted",
+          "dataType": "sc:Float",
+          "source": {
+            "fileSet": {
+              "@id": "per_item_open"
+            },
+            "extract": {
+              "column": "semantic_entropy_weighted"
+            }
+          },
+          "description": "UQ score; higher = more uncertain."
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "open_cell_record/mcse",
+          "name": "mcse",
+          "dataType": "sc:Float",
+          "source": {
+            "fileSet": {
+              "@id": "per_item_open"
+            },
+            "extract": {
+              "column": "mcse"
+            }
+          },
+          "description": "UQ score; higher = more uncertain."
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "open_cell_record/mcnse",
+          "name": "mcnse",
+          "dataType": "sc:Float",
+          "source": {
+            "fileSet": {
+              "@id": "per_item_open"
+            },
+            "extract": {
+              "column": "mcnse"
+            }
+          },
+          "description": "UQ score; higher = more uncertain."
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "open_cell_record/cocoa",
+          "name": "cocoa",
+          "dataType": "sc:Float",
+          "source": {
+            "fileSet": {
+              "@id": "per_item_open"
+            },
+            "extract": {
+              "column": "cocoa"
+            }
+          },
+          "description": "UQ score; higher = more uncertain."
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "open_cell_record/cocoa_1mca",
+          "name": "cocoa_1mca",
+          "dataType": "sc:Float",
+          "source": {
+            "fileSet": {
+              "@id": "per_item_open"
+            },
+            "extract": {
+              "column": "cocoa_1mca"
+            }
+          },
+          "description": "UQ score; higher = more uncertain."
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "open_cell_record/mahalanobis",
+          "name": "mahalanobis",
+          "dataType": "sc:Float",
+          "source": {
+            "fileSet": {
+              "@id": "per_item_open"
+            },
+            "extract": {
+              "column": "mahalanobis"
+            }
+          },
+          "description": "UQ score; higher = more uncertain."
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "open_cell_record/mahalanobis_rmd",
+          "name": "mahalanobis_rmd",
+          "dataType": "sc:Float",
+          "source": {
+            "fileSet": {
+              "@id": "per_item_open"
+            },
+            "extract": {
+              "column": "mahalanobis_rmd"
+            }
+          },
+          "description": "UQ score; higher = more uncertain."
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "open_cell_record/mahalanobis_rde",
+          "name": "mahalanobis_rde",
+          "dataType": "sc:Float",
+          "source": {
+            "fileSet": {
+              "@id": "per_item_open"
+            },
+            "extract": {
+              "column": "mahalanobis_rde"
+            }
+          },
+          "description": "UQ score; higher = more uncertain."
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "open_cell_record/saplma",
+          "name": "saplma",
+          "dataType": "sc:Float",
+          "source": {
+            "fileSet": {
+              "@id": "per_item_open"
+            },
+            "extract": {
+              "column": "saplma"
+            }
+          },
+          "description": "UQ score; higher = more uncertain."
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "open_cell_record/sep",
+          "name": "sep",
+          "dataType": "sc:Float",
+          "source": {
+            "fileSet": {
+              "@id": "per_item_open"
+            },
+            "extract": {
+              "column": "sep"
+            }
+          },
+          "description": "UQ score; higher = more uncertain."
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "open_cell_record/focus",
+          "name": "focus",
+          "dataType": "sc:Float",
+          "source": {
+            "fileSet": {
+              "@id": "per_item_open"
+            },
+            "extract": {
+              "column": "focus"
+            }
+          },
+          "description": "UQ score; higher = more uncertain."
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "open_cell_record/rauq_proxy_full",
+          "name": "rauq_proxy_full",
+          "dataType": "sc:Float",
+          "source": {
+            "fileSet": {
+              "@id": "per_item_open"
+            },
+            "extract": {
+              "column": "rauq_proxy_full"
+            }
+          },
+          "description": "UQ score; higher = more uncertain."
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "open_cell_record/uqac",
+          "name": "uqac",
+          "dataType": "sc:Float",
+          "source": {
+            "fileSet": {
+              "@id": "per_item_open"
+            },
+            "extract": {
+              "column": "uqac"
+            }
+          },
+          "description": "UQ score; higher = more uncertain."
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "open_cell_record/p_true",
+          "name": "p_true",
+          "dataType": "sc:Float",
+          "source": {
+            "fileSet": {
+              "@id": "per_item_open"
+            },
+            "extract": {
+              "column": "p_true"
+            }
+          },
+          "description": "UQ score; higher = more uncertain."
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "closed_cell_record",
+      "name": "closed_cell_record",
+      "description": "Click geometry in the 12 closed-API cells.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "closed_cell_record/item_id",
+          "name": "item_id",
+          "dataType": "sc:Text",
+          "description": "Stable item identifier.",
+          "source": {
+            "fileSet": {
+              "@id": "per_item_closed"
+            },
+            "extract": {
+              "column": "item_id"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "closed_cell_record/greedy_x",
+          "name": "greedy_x",
+          "dataType": "sc:Float",
+          "description": "Predicted click x (pixels).",
+          "source": {
+            "fileSet": {
+              "@id": "per_item_closed"
+            },
+            "extract": {
+              "column": "greedy_x"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "closed_cell_record/greedy_y",
+          "name": "greedy_y",
+          "dataType": "sc:Float",
+          "description": "Predicted click y (pixels).",
+          "source": {
+            "fileSet": {
+              "@id": "per_item_closed"
+            },
+            "extract": {
+              "column": "greedy_y"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "closed_cell_record/gold_x",
+          "name": "gold_x",
+          "dataType": "sc:Float",
+          "description": "Gold target x (pixels).",
+          "source": {
+            "fileSet": {
+              "@id": "per_item_closed"
+            },
+            "extract": {
+              "column": "gold_x"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "closed_cell_record/gold_y",
+          "name": "gold_y",
+          "dataType": "sc:Float",
+          "description": "Gold target y (pixels).",
+          "source": {
+            "fileSet": {
+              "@id": "per_item_closed"
+            },
+            "extract": {
+              "column": "gold_y"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "closed_cell_record/d_pix",
+          "name": "d_pix",
+          "dataType": "sc:Float",
+          "description": "Click-to-gold distance in pixels.",
+          "source": {
+            "fileSet": {
+              "@id": "per_item_closed"
+            },
+            "extract": {
+              "column": "d_pix"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+cff-version: 1.2.0
+message: "If you use this software or data, please cite the paper below."
+title: "argus-uq"
+type: software
+version: 0.1.0
+license: MIT
+repository-code: "https://github.com/divake/argus-uq"
+authors: &authors
+  - family-names: Kumar
+    given-names: Divake
+    affiliation: University of Illinois Chicago
+  - family-names: Tayebati
+    given-names: Sina
+    affiliation: University of Illinois Chicago
+  - family-names: Naik
+    given-names: Devashri
+    affiliation: University of Illinois Chicago
+  - family-names: Rios
+    given-names: Amanda Sofie
+    affiliation: Intel Labs
+  - family-names: Ahuja
+    given-names: Nilesh
+    affiliation: Intel Labs
+  - family-names: Tickoo
+    given-names: Omesh
+    affiliation: Intel Labs
+  - family-names: Krishnan
+    given-names: Ranganath
+    affiliation: Capital One AI Labs
+  - family-names: Trivedi
+    given-names: Amit Ranjan
+    affiliation: University of Illinois Chicago
+preferred-citation:
+  type: conference-paper
+  title: "Argus: A Cross-Regime Study of Uncertainty Quantification Transferability in Single-Step GUI Grounding"
+  authors: *authors
+  collection-title: "NeurIPS 2026 Evaluations and Datasets Track"
+  year: 2026

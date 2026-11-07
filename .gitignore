@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+*.egg
+build/
+dist/
+.installed.cfg
+.eggs/
+
+# Virtual envs
+.venv/
+venv/
+env/
+
+# Test / coverage
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Hydra outputs
+outputs/
+multirun/
+.hydra/
+
+# Local development
+*.log
+.env
+.env.local
+local_*/
+scratch/
+
+# NOTE: data_release/ files (parquets, derived CSVs, records.jsonl)
+# are intentionally tracked; they are part of the released artifacts.

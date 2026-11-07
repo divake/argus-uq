@@ -1,0 +1,13 @@
+vendor,dataset,closed_cell,open_cell_q72,n_common_methods,rho_AUROC,p,closed_top_method,open_top_method
+anthropic,osg,anthropic_osg,Q72xOSG,8,0.8095238095238096,0.014902667686230067,ccp,sep
+gemini,osg,gemini_osg,Q72xOSG,8,-0.5000000000000001,0.20703124999999997,verbalized_1s,sep
+openai,osg,openai_osg,Q72xOSG,8,-0.7619047619047621,0.028004939153071794,verbalized_2s,sep
+anthropic,sp,anthropic_sp,Q72xSP,8,-0.011976262619132589,0.9775466547038871,ccp,saplma
+gemini,sp,gemini_sp,Q72xSP,8,0.16766767666785626,0.691465351646736,verbalized_2s,saplma
+openai,sp_300,openai_sp_300,Q72xSP,8,0.05988131309566295,0.8879906501125185,ccp,saplma
+anthropic,uiv,anthropic_uiv,Q72xUIV,8,0.880952380952381,0.0038503204637324014,ccp,saplma
+gemini,uiv,gemini_uiv,Q72xUIV,8,0.6190476190476191,0.1017330374542646,ccp,saplma
+openai,uiv,openai_uiv,Q72xUIV,8,0.07142857142857144,0.8665262706759088,verbalized_1s,saplma
+anthropic,v2,anthropic_v2,Q72xV2,8,-0.13173888881045848,0.7558326362593347,verbalized_2s,saplma
+gemini,v2_300,gemini_v2_300,Q72xV2,8,-0.7380952380952381,0.03655276105286081,verbalized_1s,saplma
+openai,v2_300,openai_v2_300,Q72xV2,8,0.4761904761904762,0.23293553465009798,ccp,saplma

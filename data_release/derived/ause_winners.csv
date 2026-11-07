@@ -1,0 +1,17 @@
+cell_id,model,dataset,auroc_top1_method,auroc_top1_family,auroc_top1_mean,ause_top1_method,ause_top1_family,ause_top1_mean,agree
+PTxOSG,POINTS,OSWorld-G,mahalanobis_rmd,density,0.8201373037736674,mahalanobis_rmd,density,1.4487720944651619,True
+PTxSP,POINTS,ScreenSpot-Pro,saplma,density,0.8808854744870688,saplma,density,1.6838910919779315,True
+PTxV2,POINTS,ScreenSpot-v2,sep,density,0.8433300497022345,saplma,density,1.332322370584984,False
+PxUIV,POINTS,UI-Vision-EG,saplma,density,0.7955309159924083,lexical_similarity,sampling,1.4168912611244562,False
+Q72xOSG,Qwen72B,OSWorld-G,sep,density,0.8376607634789452,semantic_entropy_weighted,sampling,1.749988588908934,False
+Q72xSP,Qwen72B,ScreenSpot-Pro,saplma,density,0.8891665717143327,focus,attention,1.407749804900822,False
+Q72xV2,Qwen72B,ScreenSpot-v2,saplma,density,0.7637849289967934,hedge,vlm-native,0.8890315900395884,False
+Q72xUIV,Qwen72B,UI-Vision-EG,saplma,density,0.8344653392330383,ccp,hybrid,1.3430051881673335,False
+Q7xOSG,Qwen7B,OSWorld-G,sep,density,0.7863550899811979,ccp,hybrid,1.402473220902292,False
+Q7xSP,Qwen7B,ScreenSpot-Pro,sep,density,0.8827668215648495,cocoa,hybrid,1.0375822654416558,False
+Q7xV2,Qwen7B,ScreenSpot-v2,saplma,density,0.8172319440025454,ccp,hybrid,0.9560727530561476,False
+Q7xUIV,Qwen7B,UI-Vision-EG,mean_token_entropy,logit,0.8162140790742527,cocoa,hybrid,1.066601426198668,False
+UIxOSG,UI-TARS,OSWorld-G,sep,density,0.8631467889908256,saplma,density,1.416380223362568,False
+UIxSP,UI-TARS,ScreenSpot-Pro,saplma,density,0.8767605188067445,cocoa_1mca,hybrid,1.0618054809004414,False
+UIxV2,UI-TARS,ScreenSpot-v2,cocoa_1mca,hybrid,0.8415201703110341,ccp,hybrid,0.8938736198442734,False
+UIxUIV,UI-TARS,UI-Vision-EG,cocoa,hybrid,0.8247519379844961,semantic_entropy_weighted,sampling,0.9240945459830204,False
